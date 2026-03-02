@@ -1,0 +1,79 @@
+:root {
+  --body-bg: #ffffff;
+  --card-bg: #f8fafc;
+  --feature-bg: #e5e7eb;
+  --font-header-color: #121826;
+  --per-month-color: #4d556233;
+  --card-popular-bg: #121826;
+  --get-started-popular-bg: #7c4f1e;
+  --blue-color: #263fa9;
+  --p-header-color: #4d5562;
+  --heading-size: 2rem;
+  --heading-price: 4rem;
+  --body-text-size: 1rem;
+}
+
+html {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p,
+h3 {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: var(--heading-size);
+  color: var(--font-header-color);
+  text-align: center;
+}
+
+header p {
+  font-size: var(--body-text-size);
+  color: var(--p-header-color);
+  width: 28rem;
+  text-align: center;
+}
+
+.card-header,
+.empty {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features,
+.feature-data {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--per-month-color);
+}
+
+.features {
+  justify-content: flex-start;
+  padding-left: 1rem;
+}
