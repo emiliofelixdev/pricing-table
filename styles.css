@@ -17,6 +17,10 @@ html {
   font-family: "Be Vietnam Pro", sans-serif;
 }
 
+body {
+  background-color: var(--body-bg);
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -33,12 +37,14 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url(./resources/bg-pattern.png);
 }
 
 header h1 {
   font-size: var(--heading-size);
   color: var(--font-header-color);
   text-align: center;
+  font-weight: 700;
 }
 
 header p {
@@ -59,9 +65,15 @@ header p {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: 1.5fr repeat(4, 1fr);
+  grid-template-columns: 220px repeat(4, minmax(0, 1fr));
   max-width: 1200px;
   margin: 0 auto;
+  gap: 0;
+}
+
+.features-card {
+  padding: 0;
+  margin: 0;
 }
 
 .features,
@@ -76,4 +88,42 @@ header p {
 .features {
   justify-content: flex-start;
   padding-left: 1rem;
+  color: var(--font-header-color);
+  font-weight: 600;
+  font-size: var(--body-text-size);
+}
+
+.features:last-of-type {
+  border-bottom-left-radius: 10px;
+}
+
+.features-stripe {
+  background-color: var(--card-bg);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.pricing-card.popular {
+  background-color: var(--card-popular-bg);
+  color: var(--body-bg);
+  border-radius: 10px;
+}
+
+.card-header h3 {
+  font-size: var(--body-text-size);
+  color: var(--blue-color);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.price {
+  font-size: var(--heading-price);
+  font-weight: 600;
+  color: var(--font-header-color);
+}
+
+.month {
+  font-size: var(--body-text-size);
+  color: var(--p-header-color);
+  font-weight: 400;
 }
