@@ -38,6 +38,8 @@ header {
   justify-content: center;
   align-items: center;
   background-image: url(./resources/bg-pattern.png);
+  border-bottom: 1px solid var(--per-month-color);
+  width: 100%;
 }
 
 header h1 {
@@ -75,6 +77,9 @@ header p {
   width: 100%;
   margin: 2rem auto 0 auto;
   gap: 0;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .features-card {
@@ -113,6 +118,9 @@ header p {
   background-color: var(--card-popular-bg);
   color: var(--body-bg);
   border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .pricing-card.popular p {
@@ -155,4 +163,35 @@ header p {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+}
+
+.started.brown {
+  background-color: var(--get-started-popular-bg);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: var(--body-bg);
+}
+
+.started:hover {
+  cursor: pointer;
+}
+
+.pricing-card:has(.started:hover) {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  z-index: 20;
+  border-radius: 10px;
+}
+
+.author-info {
+  font-size: 0.7rem;
+  color: var(--p-header-color);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.author-info a {
+  text-decoration: none;
+  color: var(--blue-color);
+  font-weight: 600;
 }
